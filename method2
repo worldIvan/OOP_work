@@ -1,0 +1,14 @@
+#include <iostream>
+#include <fstream>
+
+int main() {
+    std::ofstream outFile("output.txt");  // Відкриває файл для запису
+    if (outFile.is_open()) {
+        outFile << "Hello, World!" << std::endl;  // Записує текст у файл
+        outFile.close();  // Закриває файл
+    }
+    else {
+        std::cout << "Не вдалося відкрити файл." << std::endl;
+    }
+    return 0;
+}
